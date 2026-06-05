@@ -1,5 +1,8 @@
-[phases.setup]
-nixPkgs = ["ffmpeg"]
+[build]
+builder = "nixpacks"
 
-[deploy]
-startCommand = "python am_nhac.py"
+[phases.setup]
+nixPkgs = ["ffmpeg", "libopus", "libffi"]
+
+[service]
+start_command = "python am_nhac.py"
