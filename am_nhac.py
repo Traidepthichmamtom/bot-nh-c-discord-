@@ -1,15 +1,10 @@
-import sys
-sys.path.append(r'C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages')
-
 import discord
-from discord.ext import commands
-# ... giữ nguyên code cũ của bố ở dưới
-import discord
-import sys
-print("Bot đang dùng Python tại:", sys.executable) 
 from discord.ext import commands
 import yt_dlp
 import asyncio
+import sys
+print("Bot đang dùng Python tại:", sys.executable)
+
 
 # Cấu hình bot
 intents = discord.Intents.default()
@@ -55,8 +50,9 @@ async def play(ctx, url):
                 'options': '-vn'
             }
             source = discord.FFmpegPCMAudio(
-                audio_url, executable=r"C:\Users\user\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.1.1-full_build\bin\ffmpeg.exe",
+                audio_url, executable="ffmpeg",
                 **ffmpeg_options)
+
             
             # Phát nhạc
             ctx.voice_client.play(source)
