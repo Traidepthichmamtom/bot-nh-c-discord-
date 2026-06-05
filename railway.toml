@@ -2,7 +2,12 @@
 builder = "nixpacks"
 
 [phases.setup]
+# Đây là các gói hệ thống bot cần để phát nhạc
 nixPkgs = ["ffmpeg", "libopus", "libffi"]
 
+[build.nixpacks]
+build_cmd = "pip install -r requirements.txt"
+
 [service]
-start_command = "python am_nhac.py"
+# Dấu ngoặc đơn giúp xử lý tên file có dấu cách
+start_command = "python 'am nhac.py'"
