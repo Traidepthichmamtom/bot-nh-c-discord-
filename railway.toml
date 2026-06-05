@@ -1,0 +1,12 @@
+[build]
+builder = "nixpacks"
+
+[build.nixpacks]
+build_cmd = "pip install -r requirements.txt"
+
+[service]
+# Dấu ngoặc kép là bắt buộc để xử lý cái tên có dấu cách
+start_command = "python 'am nhac.py'"
+
+[service.variables]
+PYTHON_VERSION = "3.13"
