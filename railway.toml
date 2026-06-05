@@ -1,11 +1,5 @@
-[phases.setup]
-nixPkgs = ["ffmpeg"]
-
 [build]
 builder = "nixpacks"
 
-[service]
-start_command = "python 'am_nhac.py'"
-
-[service.variables]
-PYTHON_TOKEN = "3.13"
+[deploy]
+startCommand = "python 'am nhac.py'"
