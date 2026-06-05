@@ -5,7 +5,7 @@ nixPkgs = ["ffmpeg"]
 builder = "nixpacks"
 
 [service]
-start_command = "python 'am nhac.py'"
+start_command = "python 'am_nhac.py'"
 
 [service.variables]
 PYTHON_TOKEN = "3.13"
